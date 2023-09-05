@@ -19,14 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (value === 'C') {
                 display.value = '';
                 expression = '';
-            } else if (['+', '-', '*', '/'].includes(value)) {
-                const lastChar = expression[expression.length - 1];
-
-                // Check if expression is not empty and last character is not an operator
-                if (expression !== '' && !['+', '-', '*', '/'].includes(lastChar)) {
-                    expression += value;
-                    display.value = expression;
-                }
             } else {
                 // Check if expression is not empty or doesn't start with an operator
                 if (expression !== '' || !['+', '-', '*', '/'].includes(value)) {
